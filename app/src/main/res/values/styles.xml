@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="TextAppearance.App.Body">
+        <item name="fontFamily">@font/inter_family</item>
+        <item name="android:textSize">@dimen/text_body</item>
+        <item name="android:textColor">@color/foreground</item>
+    </style>
+
+    <style name="TextAppearance.App.Heading">
+        <item name="fontFamily">@font/poppins_family</item>
+        <item name="android:textSize">@dimen/text_title</item>
+        <item name="android:textColor">@color/foreground</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="TextAppearance.App.Caption">
+        <item name="fontFamily">@font/inter_family</item>
+        <item name="android:textColor">@color/muted_foreground</item>
+    </style>
+</resources>

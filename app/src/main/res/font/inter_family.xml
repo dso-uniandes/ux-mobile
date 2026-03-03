@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<font-family xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <font android:fontStyle="normal" android:fontWeight="400" app:font="@font/Inter_18pt-Regular" />
+    <font android:fontStyle="normal" android:fontWeight="500" app:font="@font/Inter_18pt-Medium" />
+    <font android:fontStyle="normal" android:fontWeight="600" app:font="@font/Inter_18pt-SemiBold" />
+    <font android:fontStyle="normal" android:fontWeight="700" app:font="@font/Inter_18pt-Bold" />
+</font-family>

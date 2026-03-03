@@ -11,5 +11,8 @@
         <item name="colorSurfaceVariant">@color/muted</item>
         <item name="colorOnSurfaceVariant">@color/muted_foreground</item>
         <item name="colorOutline">@color/border</item>
+        <item name="android:fontFamily">@font/inter_family</item>
+        <item name="textAppearanceBodyLarge">@style/TextAppearance.App.Body</item>
+        <item name="textAppearanceTitleMedium">@style/TextAppearance.App.Heading</item>
     </style>
 </resources>
