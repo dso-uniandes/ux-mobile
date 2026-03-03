@@ -9,4 +9,16 @@
     <string name="second_fragment_label">Second Fragment</string>
     <string name="next">Next</string>
     <string name="previous">Previous</string>
+    <string name="settings_title">Ajustes</string>
+    <string name="settings_sonido">Sonido</string>
+    <string name="settings_sonido_desc">Suave</string>
+    <string name="settings_vibracion">Vibración</string>
+    <string name="settings_modo_oscuro">Modo oscuro</string>
+    <string name="settings_notificaciones">Notificaciones</string>
+    <string name="settings_formato_hora">Formato de hora</string>
+    <string name="settings_formato_hora_12">12 horas</string>
+    <string name="settings_formato_hora_24">24 horas</string>
+    <string name="settings_version">Versión</string>
+    <string name="settings_version_value">Alarmas App v1.0.0</string>
+    <string name="settings_ok">Ok</string>
 </resources>

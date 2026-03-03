@@ -15,8 +15,33 @@
         <item name="android:textStyle">bold</item>
     </style>
 
+    <style name="TextAppearance.App.Heading.Settings" parent="TextAppearance.App.Heading">
+        <item name="fontFamily">@font/poppins_semibold</item>
+        <item name="android:textSize">@dimen/text_heading_settings</item>
+    </style>
+
+    <style name="TextAppearance.App.Label" parent="TextAppearance.App">
+        <item name="fontFamily">@font/inter_18pt_semibold</item>
+        <item name="android:fontFamily">@font/inter_18pt_semibold</item>
+        <item name="android:textSize">@dimen/text_label_settings</item>
+        <item name="android:textColor">@color/foreground</item>
+    </style>
+
+    <style name="TextAppearance.App.ValueStrong" parent="TextAppearance.App">
+        <item name="fontFamily">@font/inter_18pt_semibold</item>
+        <item name="android:fontFamily">@font/inter_18pt_semibold</item>
+        <item name="android:textSize">@dimen/text_label_settings</item>
+        <item name="android:textColor">@color/foreground</item>
+    </style>
+
     <style name="TextAppearance.App.Caption" parent="TextAppearance.App">
         <item name="fontFamily">@font/inter_family</item>
+        <item name="android:textSize">@dimen/text_caption_settings</item>
         <item name="android:textColor">@color/muted_foreground</item>
+    </style>
+
+    <style name="Widget.App.MaterialSwitch" parent="Widget.Material3.CompoundButton.MaterialSwitch">
+        <item name="thumbTint">@color/switch_thumb_tint</item>
+        <item name="trackTint">@color/switch_track_tint</item>
     </style>
 </resources>
