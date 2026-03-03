@@ -2,4 +2,33 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+
+    <!-- background / foreground -->
+    <color name="background">#FFFFFF</color>
+    <color name="foreground">#1A312B</color>
+
+    <!-- card / card-foreground -->
+    <color name="card">#FFFFFF</color>
+    <color name="card_foreground">#1A312B</color>
+
+    <!-- primary / primary-foreground / scale -->
+    <color name="primary">#507263</color>
+    <color name="primary_foreground">#FFFFFF</color>
+    <color name="primary_100">#D6E2DB</color>
+    <color name="primary_300">#9CB8AA</color>
+    <color name="primary_700">#2D453A</color>
+
+    <!-- secondary / secondary-foreground / scale -->
+    <color name="secondary">#DCA47C</color>
+    <color name="secondary_foreground">#FFFFFF</color>
+    <color name="secondary_100">#FDF6F0</color>
+    <color name="secondary_300">#F2DAC8</color>
+    <color name="secondary_700">#B5774A</color>
+
+    <!-- muted / muted-foreground -->
+    <color name="muted">#E1DFD9</color>
+    <color name="muted_foreground">#788C83</color>
+
+    <!-- border -->
+    <color name="border">#E1DFD9</color>
 </resources>

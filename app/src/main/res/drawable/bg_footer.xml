@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Footer bg var(card), borde superior var(border). -->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:top="0dp" android:left="0dp" android:right="0dp" android:height="1dp">
+        <shape android:shape="rectangle">
+            <solid android:color="@color/border" />
+        </shape>
+    </item>
+    <item android:top="1dp">
+        <shape android:shape="rectangle">
+            <solid android:color="@color/card" />
+        </shape>
+    </item>
+</layer-list>

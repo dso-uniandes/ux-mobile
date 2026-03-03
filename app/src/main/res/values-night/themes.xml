@@ -1,7 +1,15 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
-    <!-- Base application theme. -->
     <style name="Base.Theme.RememberIA" parent="Theme.Material3.DayNight.NoActionBar">
-        <!-- Customize your dark theme here. -->
-        <!-- <item name="colorPrimary">@color/my_dark_primary</item> -->
+        <item name="colorPrimary">@color/primary</item>
+        <item name="colorOnPrimary">@color/primary_foreground</item>
+        <item name="colorSecondary">@color/secondary</item>
+        <item name="colorOnSecondary">@color/secondary_foreground</item>
+        <item name="colorSurface">@color/background</item>
+        <item name="colorOnSurface">@color/foreground</item>
+        <item name="colorTertiary">@color/secondary</item>
+        <item name="colorOnTertiary">@color/secondary_foreground</item>
+        <item name="colorSurfaceVariant">@color/muted</item>
+        <item name="colorOnSurfaceVariant">@color/muted_foreground</item>
+        <item name="colorOutline">@color/border</item>
     </style>
 </resources>
