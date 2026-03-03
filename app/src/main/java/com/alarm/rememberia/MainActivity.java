@@ -41,6 +41,8 @@ public class MainActivity extends AppCompatActivity {
         Fragment fragment;
         if (navId == R.id.nav_ajustes) {
             fragment = new SettingsFragment();
+        } else if (navId == R.id.nav_crear) {
+            fragment = new CreateModeFragment();
         } else {
             fragment = new HomeFragment();
         }

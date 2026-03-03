@@ -13,4 +13,6 @@
     <dimen name="text_label_settings">14sp</dimen>
     <dimen name="text_caption_settings">12sp</dimen>
     <dimen name="radius_card">12dp</dimen>
+    <dimen name="create_mode_icon_size">44dp</dimen>
+    <dimen name="create_mode_subtitle_size">14sp</dimen>
 </resources>

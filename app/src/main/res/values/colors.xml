@@ -31,4 +31,8 @@
 
     <!-- border -->
     <color name="border">#E1DFD9</color>
+
+    <!-- context -->
+    <color name="context_medicine">#C87A7A</color>
+    <color name="context_medicine_bg">#FDF0F0</color>
 </resources>

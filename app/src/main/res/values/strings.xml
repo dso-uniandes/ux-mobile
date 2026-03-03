@@ -20,5 +20,16 @@
     <string name="settings_formato_hora_24">24 horas</string>
     <string name="settings_version">Versión</string>
     <string name="settings_version_value">Alarmas App v1.0.0</string>
+    <string name="create_mode_title">Crear (modos)</string>
+    <string name="create_mode_subtitle">Elige cómo crear:</string>
+    <string name="create_mode_button">Continuar</string>
+    <string name="create_mode_quick">Crear rápido</string>
+    <string name="create_mode_quick_desc">Nombre, hora y repetición</string>
+    <string name="create_mode_series">Serie / Rutina</string>
+    <string name="create_mode_series_desc">Multiples pasos encadenados</string>
+    <string name="create_mode_voice">Por voz</string>
+    <string name="create_mode_voice_desc">Dicta tu alarma con el micrófono</string>
+    <string name="create_mode_location">Por ubicación</string>
+    <string name="create_mode_location_desc">Se activa al llegar a un lugar</string>
     <string name="settings_ok">Ok</string>
 </resources>

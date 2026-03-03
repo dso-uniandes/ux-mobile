@@ -34,10 +34,23 @@
         <item name="android:textColor">@color/foreground</item>
     </style>
 
+    <style name="TextAppearance.App.CardTitle" parent="TextAppearance.App">
+        <item name="fontFamily">@font/inter_18pt_bold</item>
+        <item name="android:fontFamily">@font/inter_18pt_bold</item>
+        <item name="android:textSize">@dimen/text_label_settings</item>
+        <item name="android:textColor">@color/foreground</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
     <style name="TextAppearance.App.Caption" parent="TextAppearance.App">
         <item name="fontFamily">@font/inter_family</item>
         <item name="android:textSize">@dimen/text_caption_settings</item>
         <item name="android:textColor">@color/muted_foreground</item>
+    </style>
+
+    <style name="TextAppearance.App.CreateModeSubtitle" parent="TextAppearance.App.Body">
+        <item name="android:textSize">@dimen/create_mode_subtitle_size</item>
+        <item name="android:textColor">@color/primary_700</item>
     </style>
 
     <style name="Widget.App.MaterialSwitch" parent="Widget.Material3.CompoundButton.MaterialSwitch">
