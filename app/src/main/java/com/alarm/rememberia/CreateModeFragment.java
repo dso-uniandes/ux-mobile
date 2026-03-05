@@ -96,6 +96,12 @@ public class CreateModeFragment extends Fragment {
                     .replace(R.id.content_frame, new CreateAlarmFragment())
                     .addToBackStack("create_mode")
                     .commit();
+        } else if ("series".equals(selectedMode)) {
+            getParentFragmentManager()
+                    .beginTransaction()
+                    .replace(R.id.content_frame, new SeriesFragment())
+                    .addToBackStack("create_mode")
+                    .commit();
         } else {
             android.widget.Toast.makeText(requireContext(), "/create/" + selectedMode, android.widget.Toast.LENGTH_SHORT).show();
         }

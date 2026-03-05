@@ -37,4 +37,9 @@
     <color name="context_medicine_bg">#FDF0F0</color>
     <color name="context_home">#DCA47C</color>
     <color name="context_study">#9B8B9B</color>
+    <color name="context_water">#6295A2</color>
+    <color name="context_water_bg">#E8F0F2</color>
+    <color name="context_sun">#E8C872</color>
+    <color name="context_sun_bg">#FDF9ED</color>
+    <color name="accent">#E8EFEA</color>
 </resources>

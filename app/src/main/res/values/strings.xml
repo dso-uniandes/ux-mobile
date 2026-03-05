@@ -49,4 +49,21 @@
     <string name="create_alarm_name_hint">Purificar agua</string>
     <string name="create_alarm_time_hint">7:30 pm</string>
     <string name="create_alarm_more_category">Más categorías (próximamente)</string>
+    <string name="series_title">Serie (Rutina)</string>
+    <string name="series_routine_name">Rutina mañana</string>
+    <string name="series_frequency_lv">L-V</string>
+    <string name="series_frequency_time">6:30 am</string>
+    <string name="series_state_on">Estado: ON</string>
+    <string name="series_section_steps">Pasos (ordenados)</string>
+    <string name="series_step_wake">Despertar</string>
+    <string name="series_step_water">Agua</string>
+    <string name="series_step_stretch">Estiramiento</string>
+    <string name="series_section_preview">Vista previa (próximos 3 disparos)</string>
+    <string name="series_preview_lun">Lun 6:30 am</string>
+    <string name="series_preview_mar">Mar 6:30 am</string>
+    <string name="series_preview_mie">Mie 6:30 am</string>
+    <string name="series_button_save">Guardar serie</string>
+    <string name="series_step_time_1">6:30</string>
+    <string name="series_step_time_2">6:35</string>
+    <string name="series_step_time_3">6:45</string>
 </resources>
