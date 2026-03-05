@@ -35,4 +35,6 @@
     <!-- context -->
     <color name="context_medicine">#C87A7A</color>
     <color name="context_medicine_bg">#FDF0F0</color>
+    <color name="context_home">#DCA47C</color>
+    <color name="context_study">#9B8B9B</color>
 </resources>

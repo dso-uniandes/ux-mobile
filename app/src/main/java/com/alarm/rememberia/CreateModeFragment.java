@@ -90,7 +90,15 @@ public class CreateModeFragment extends Fragment {
     }
 
     private void onContinue() {
-        String path = "/create/" + selectedMode;
+        if ("quick".equals(selectedMode)) {
+            getParentFragmentManager()
+                    .beginTransaction()
+                    .replace(R.id.content_frame, new CreateAlarmFragment())
+                    .addToBackStack("create_mode")
+                    .commit();
+        } else {
+            android.widget.Toast.makeText(requireContext(), "/create/" + selectedMode, android.widget.Toast.LENGTH_SHORT).show();
+        }
     }
 
     @Override

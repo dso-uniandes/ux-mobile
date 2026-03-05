@@ -15,4 +15,6 @@
     <dimen name="radius_card">12dp</dimen>
     <dimen name="create_mode_icon_size">44dp</dimen>
     <dimen name="create_mode_subtitle_size">14sp</dimen>
+    <dimen name="chip_category_text_size">12sp</dimen>
+    <dimen name="chip_stroke_width">1dp</dimen>
 </resources>

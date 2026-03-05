@@ -53,6 +53,28 @@
         <item name="android:textColor">@color/primary_700</item>
     </style>
 
+    <style name="TextAppearance.App.SectionLabel" parent="TextAppearance.App.Caption">
+        <item name="android:textSize">11sp</item>
+        <item name="android:textColor">@color/muted_foreground</item>
+        <item name="android:letterSpacing">0.15</item>
+        <item name="android:textAllCaps">true</item>
+    </style>
+
+    <style name="TextAppearance.App.Chip" parent="TextAppearance.App.Body">
+        <item name="android:textSize">@dimen/chip_category_text_size</item>
+        <item name="android:textColor">@color/foreground</item>
+    </style>
+
+    <style name="Widget.App.CategoryChip" parent="Widget.Material3.Chip.Assist">
+        <item name="android:textAppearance">@style/TextAppearance.App.Chip</item>
+        <item name="chipIconSize">14dp</item>
+        <item name="chipMinHeight">32dp</item>
+        <item name="chipCornerRadius">16dp</item>
+        <item name="chipStrokeColor">@color/border</item>
+        <item name="chipStrokeWidth">@dimen/chip_stroke_width</item>
+        <item name="chipBackgroundColor">@color/card</item>
+    </style>
+
     <style name="Widget.App.MaterialSwitch" parent="Widget.Material3.CompoundButton.MaterialSwitch">
         <item name="thumbTint">@color/switch_thumb_tint</item>
         <item name="trackTint">@color/switch_track_tint</item>

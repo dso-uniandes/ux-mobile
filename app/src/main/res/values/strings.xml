@@ -32,4 +32,21 @@
     <string name="create_mode_location">Por ubicación</string>
     <string name="create_mode_location_desc">Se activa al llegar a un lugar</string>
     <string name="settings_ok">Ok</string>
+    <string name="create_alarm_title">Crear alarma</string>
+    <string name="create_alarm_section_name">Nombre</string>
+    <string name="create_alarm_section_time">Hora</string>
+    <string name="create_alarm_section_repeat">Repeticion</string>
+    <string name="create_alarm_section_category">Categoria</string>
+    <string name="create_alarm_section_state">Estado</string>
+    <string name="create_alarm_repeat_daily">Diario</string>
+    <string name="create_alarm_repeat_weekdays">L-V</string>
+    <string name="create_alarm_repeat_sat">Sab</string>
+    <string name="create_alarm_category_health">Salud</string>
+    <string name="create_alarm_category_home">Hogar</string>
+    <string name="create_alarm_category_study">Estudio</string>
+    <string name="create_alarm_reminder">Recordatorio</string>
+    <string name="create_alarm_button">Crear</string>
+    <string name="create_alarm_name_hint">Purificar agua</string>
+    <string name="create_alarm_time_hint">7:30 pm</string>
+    <string name="create_alarm_more_category">Más categorías (próximamente)</string>
 </resources>

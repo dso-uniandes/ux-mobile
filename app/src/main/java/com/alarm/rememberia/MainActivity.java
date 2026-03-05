@@ -50,4 +50,13 @@ public class MainActivity extends AppCompatActivity {
                 .replace(R.id.content_frame, fragment)
                 .commit();
     }
+
+    public void navigateToHome() {
+        androidx.fragment.app.FragmentManager fm = getSupportFragmentManager();
+        fm.popBackStack(null, androidx.fragment.app.FragmentManager.POP_BACK_STACK_INCLUSIVE);
+        fm.beginTransaction()
+                .replace(R.id.content_frame, new HomeFragment())
+                .commit();
+        binding.bottomNav.setSelectedItemId(R.id.nav_home);
+    }
 }
