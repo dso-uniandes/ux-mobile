@@ -42,4 +42,6 @@
     <color name="context_sun">#E8C872</color>
     <color name="context_sun_bg">#FDF9ED</color>
     <color name="accent">#E8EFEA</color>
+    <color name="success">#749C75</color>
+    <color name="neutral_dark">#4A5D54</color>
 </resources>

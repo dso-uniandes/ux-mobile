@@ -66,4 +66,21 @@
     <string name="series_step_time_1">6:30</string>
     <string name="series_step_time_2">6:35</string>
     <string name="series_step_time_3">6:45</string>
+    <string name="location_title">Por ubicación</string>
+    <string name="location_enable_label">Activar por ubicación</string>
+    <string name="location_enable_on">ON</string>
+    <string name="location_enable_off">OFF</string>
+    <string name="location_section_preview">Vista previa de ubicación</string>
+    <string name="location_map_placeholder">Mapa</string>
+    <string name="location_section_when">Cuando llegue a</string>
+    <string name="location_place_home">Casa</string>
+    <string name="location_place_work">Trabajo</string>
+    <string name="location_section_linked">Alarma vinculada</string>
+    <string name="location_linked_alarm">Purificar agua / 7:30 pm / ON</string>
+    <string name="location_section_message">Mensaje</string>
+    <string name="location_message_text">\"Se activará al detectar llegada a casa\"</string>
+    <string name="location_section_state">Estado</string>
+    <string name="location_state_detected">Ubicación detectada: Casa</string>
+    <string name="location_state_permissions">Permisos GPS: OK</string>
+    <string name="location_button_save">Guardar</string>
 </resources>
