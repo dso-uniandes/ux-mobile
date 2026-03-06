@@ -83,4 +83,17 @@
     <string name="location_state_detected">Ubicación detectada: Casa</string>
     <string name="location_state_permissions">Permisos GPS: OK</string>
     <string name="location_button_save">Guardar</string>
+    <string name="voice_title">Por voz</string>
+    <string name="voice_tap_to_speak">Toca para hablar</string>
+    <string name="voice_listening">Escuchando…</string>
+    <string name="voice_processing">Procesando…</string>
+    <string name="voice_section_transcription">Transcripcion</string>
+    <string name="voice_transcription_text">\"Recuérdame purificar agua al llegar a casa\"</string>
+    <string name="voice_section_detected">Detectado</string>
+    <string name="voice_action">Accion: Purificar agua</string>
+    <string name="voice_condition">Condicion: Llegar a casa</string>
+    <string name="voice_cancel">Cancelar</string>
+    <string name="voice_confirm">Confirmar</string>
+    <string name="voice_error">No te entendi</string>
+    <string name="voice_retry">Reintentar</string>
 </resources>
