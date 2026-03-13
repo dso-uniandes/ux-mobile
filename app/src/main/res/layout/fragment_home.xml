@@ -1,5 +1,163 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/background" />
+    android:orientation="vertical"
+    android:background="@color/background"
+    tools:context=".HomeFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingStart="@dimen/spacing_20"
+        android:paddingEnd="@dimen/spacing_20"
+        android:paddingTop="@dimen/spacing_20">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="@dimen/spacing_20">
+
+            <View
+                android:layout_width="3dp"
+                android:layout_height="20dp"
+                android:background="@drawable/bg_primary_bar"
+                android:layout_marginEnd="@dimen/spacing_12" />
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/ic_alarm_clock"
+                app:tint="@color/primary"
+                android:contentDescription="@null"
+                android:layout_marginEnd="@dimen/spacing_12" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/home_title"
+                android:textAppearance="@style/TextAppearance.App.Heading.Settings" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="@dimen/spacing_12">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_search"
+                style="@style/Widget.Material3.Button.OutlinedButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginEnd="@dimen/spacing_8"
+                android:text="@string/home_search_button"
+                android:textAppearance="@style/TextAppearance.App.Body"
+                android:textColor="@color/foreground"
+                app:icon="@drawable/ic_search"
+                app:iconTint="@color/primary"
+                app:iconSize="14dp"
+                app:strokeColor="@color/border"
+                app:strokeWidth="1dp"
+                app:backgroundTint="@color/white" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_filter"
+                style="@style/Widget.Material3.Button.OutlinedButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/home_filter_button"
+                android:textAppearance="@style/TextAppearance.App.Body"
+                android:textColor="@color/foreground"
+                app:icon="@drawable/ic_sliders_horizontal"
+                app:iconTint="@color/secondary_700"
+                app:iconSize="14dp"
+                app:strokeColor="@color/border"
+                app:strokeWidth="1dp"
+                app:backgroundTint="@color/white" />
+        </LinearLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/search_input_layout"
+            style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/spacing_20"
+            app:boxBackgroundColor="@color/white"
+            app:boxStrokeColor="@color/border"
+            app:boxCornerRadiusTopStart="@dimen/radius_card"
+            app:boxCornerRadiusTopEnd="@dimen/radius_card"
+            app:boxCornerRadiusBottomStart="@dimen/radius_card"
+            app:boxCornerRadiusBottomEnd="@dimen/radius_card"
+            app:hintEnabled="false"
+            app:startIconDrawable="@drawable/ic_search"
+            app:startIconTint="@color/muted_foreground">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/search_input"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="@dimen/min_touch_target_height"
+                android:inputType="text"
+                android:textAppearance="@style/TextAppearance.App.Body"
+                android:hint="@string/home_search_hint"
+                android:textColorHint="@color/muted_foreground" />
+        </com.google.android.material.textfield.TextInputLayout>
+    </LinearLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true"
+        android:overScrollMode="ifContentScrolls">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingStart="@dimen/spacing_20"
+            android:paddingEnd="@dimen/spacing_20"
+            android:paddingBottom="@dimen/spacing_8">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/home_section_today"
+                android:textAppearance="@style/TextAppearance.App.SectionLabel"
+                android:textColor="@color/secondary_700"
+                android:layout_marginBottom="@dimen/spacing_8" />
+
+            <LinearLayout
+                android:id="@+id/alarms_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip_inactive"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_20"
+                android:layout_marginBottom="@dimen/spacing_8"
+                android:text="@string/home_section_inactive"
+                android:textColor="@color/secondary_700"
+                android:textSize="11sp"
+                app:chipStrokeColor="@color/secondary_300"
+                app:chipStrokeWidth="1dp"
+                app:chipBackgroundColor="@color/white" />
+
+            <LinearLayout
+                android:id="@+id/inactive_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" />
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</LinearLayout>

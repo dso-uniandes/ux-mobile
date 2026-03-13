@@ -41,6 +41,11 @@
     <color name="context_water_bg">#E8F0F2</color>
     <color name="context_sun">#E8C872</color>
     <color name="context_sun_bg">#FDF9ED</color>
+    <color name="context_plant">#749C75</color>
+    <color name="context_plant_bg">#F2F6ED</color>
+    <color name="context_study_bg">#F4F2F4</color>
+    <color name="context_trash">#666666</color>
+    <color name="context_trash_bg">#F5F5F5</color>
     <color name="accent">#E8EFEA</color>
     <color name="success">#749C75</color>
     <color name="neutral_dark">#4A5D54</color>

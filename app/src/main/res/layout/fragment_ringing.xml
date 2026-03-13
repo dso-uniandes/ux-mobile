@@ -1,0 +1,343 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    tools:context=".RingingFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/spacing_20">
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/spacing_20"
+            app:cardBackgroundColor="@color/card"
+            app:cardCornerRadius="@dimen/radius_card"
+            app:cardElevation="0dp"
+            app:strokeColor="@color/border"
+            app:strokeWidth="1dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="@dimen/spacing_16">
+
+                <View
+                    android:layout_width="3dp"
+                    android:layout_height="20dp"
+                    android:background="@drawable/bg_primary_bar" />
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginStart="@dimen/spacing_12"
+                    android:contentDescription="@null"
+                    android:src="@drawable/ic_bell"
+                    app:tint="@color/primary" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/spacing_12"
+                    android:text="@string/ringing_title"
+                    android:textAppearance="@style/TextAppearance.App.Heading.Settings" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/spacing_20"
+            app:cardBackgroundColor="@color/background"
+            app:cardCornerRadius="@dimen/radius_card"
+            app:cardElevation="0dp"
+            app:strokeColor="@color/border"
+            app:strokeWidth="1dp">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clipChildren="false"
+                android:clipToPadding="false">
+
+                <FrameLayout
+                    android:id="@+id/bell_pattern_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:clipChildren="false"
+                    android:clipToPadding="false" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical"
+                    android:paddingTop="@dimen/spacing_24"
+                    android:paddingBottom="@dimen/spacing_24">
+
+                    <FrameLayout
+                        android:layout_width="56dp"
+                        android:layout_height="56dp"
+                        android:layout_marginBottom="@dimen/spacing_12"
+                        android:background="@drawable/bg_circle_primary_100_bordered">
+
+                        <ImageView
+                            android:id="@+id/central_bell_icon"
+                            android:layout_width="26dp"
+                            android:layout_height="26dp"
+                            android:layout_gravity="center"
+                            android:contentDescription="@null"
+                            android:src="@drawable/ic_bell"
+                            app:tint="@color/primary" />
+                    </FrameLayout>
+
+                    <TextView
+                        android:id="@+id/alarm_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/ringing_alarm_name"
+                        android:textAppearance="@style/TextAppearance.App.Heading.Settings"
+                        android:textSize="19sp" />
+                </LinearLayout>
+            </FrameLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/spacing_8"
+            android:text="@string/ringing_section_details"
+            android:textAppearance="@style/TextAppearance.App.SectionLabel" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/spacing_20"
+            app:cardBackgroundColor="@color/card"
+            app:cardCornerRadius="@dimen/radius_card"
+            app:cardElevation="0dp"
+            app:strokeColor="@color/border"
+            app:strokeWidth="1dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingStart="@dimen/spacing_16"
+                android:paddingTop="@dimen/spacing_12"
+                android:paddingEnd="@dimen/spacing_16"
+                android:paddingBottom="@dimen/spacing_12">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:layout_marginBottom="6dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="14dp"
+                        android:layout_height="14dp"
+                        android:contentDescription="@null"
+                        android:src="@drawable/ic_map_pin"
+                        app:tint="@color/muted_foreground" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/spacing_8"
+                        android:fontFamily="@font/inter_family"
+                        android:text="@string/ringing_location"
+                        android:textColor="@color/foreground"
+                        android:textSize="13sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="14dp"
+                        android:layout_height="14dp"
+                        android:contentDescription="@null"
+                        android:src="@drawable/ic_clock"
+                        app:tint="@color/muted_foreground" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/spacing_8"
+                        android:fontFamily="@font/inter_family"
+                        android:text="@string/ringing_time"
+                        android:textColor="@color/foreground"
+                        android:textSize="13sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="6dp"
+                        android:layout_marginEnd="6dp"
+                        android:text="|"
+                        android:textColor="@color/border"
+                        android:textSize="13sp" />
+
+                    <ImageView
+                        android:layout_width="14dp"
+                        android:layout_height="14dp"
+                        android:contentDescription="@null"
+                        android:src="@drawable/ic_timer"
+                        app:tint="@color/muted_foreground" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/spacing_8"
+                        android:fontFamily="@font/inter_family"
+                        android:text="@string/ringing_elapsed"
+                        android:textColor="@color/foreground"
+                        android:textSize="13sp" />
+                </LinearLayout>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/spacing_20"
+            android:orientation="horizontal">
+
+            <com.google.android.material.chip.Chip
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="4dp"
+                android:layout_weight="1"
+                android:text="@string/ringing_chip_sound"
+                android:textSize="12sp"
+                app:chipBackgroundColor="@color/card"
+                app:chipIcon="@drawable/ic_volume2"
+                app:chipIconSize="14dp"
+                app:chipIconTint="@color/secondary_700"
+                app:chipStrokeColor="@color/secondary_300"
+                app:chipStrokeWidth="1dp" />
+
+            <com.google.android.material.chip.Chip
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:layout_weight="1"
+                android:text="@string/ringing_chip_vibration"
+                android:textSize="12sp"
+                app:chipBackgroundColor="@color/card"
+                app:chipIcon="@drawable/ic_vibrate"
+                app:chipIconSize="14dp"
+                app:chipIconTint="@color/secondary_700"
+                app:chipStrokeColor="@color/secondary_300"
+                app:chipStrokeWidth="1dp" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/spacing_8"
+            android:text="@string/ringing_section_actions"
+            android:textAppearance="@style/TextAppearance.App.SectionLabel" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/button_done"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/spacing_12"
+            android:paddingTop="@dimen/spacing_12"
+            android:paddingBottom="@dimen/spacing_12"
+            android:text="@string/ringing_button_done"
+            android:textAllCaps="false"
+            android:fontFamily="@font/poppins_semibold"
+            app:backgroundTint="@color/primary"
+            app:icon="@drawable/ic_check_circle_2"
+            app:iconGravity="textStart"
+            app:iconSize="18dp"
+            app:iconTint="@color/primary_foreground" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/button_snooze"
+            style="@style/Widget.Material3.Button.OutlinedButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/spacing_12"
+            android:paddingTop="@dimen/spacing_12"
+            android:paddingBottom="@dimen/spacing_12"
+            android:text="@string/ringing_button_snooze"
+            android:textAllCaps="false"
+            android:textColor="@color/foreground"
+            android:fontFamily="@font/poppins_semibold"
+            app:icon="@drawable/ic_moon"
+            app:iconGravity="textStart"
+            app:iconSize="18dp"
+            app:iconTint="@color/foreground"
+            app:strokeColor="@color/border" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/button_reschedule"
+            style="@style/Widget.Material3.Button.OutlinedButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/spacing_20"
+            android:paddingTop="@dimen/spacing_12"
+            android:paddingBottom="@dimen/spacing_12"
+            android:text="@string/ringing_button_reschedule"
+            android:textAllCaps="false"
+            android:textColor="@color/foreground"
+            android:fontFamily="@font/poppins_semibold"
+            app:icon="@drawable/ic_alarm_clock"
+            app:iconGravity="textStart"
+            app:iconSize="18dp"
+            app:iconTint="@color/foreground"
+            app:strokeColor="@color/border" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardBackgroundColor="@color/context_water_bg"
+            app:cardCornerRadius="@dimen/radius_card"
+            app:cardElevation="0dp"
+            app:strokeColor="@color/context_water"
+            app:strokeWidth="1dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="@dimen/spacing_12">
+
+                <ImageView
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:layout_marginEnd="@dimen/spacing_8"
+                    android:contentDescription="@null"
+                    android:src="@drawable/ic_info"
+                    app:tint="@color/context_water" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/inter_family"
+                    android:text="@string/ringing_tip"
+                    android:textColor="@color/foreground"
+                    android:textSize="12sp" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

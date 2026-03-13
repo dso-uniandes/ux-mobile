@@ -43,6 +43,8 @@ public class MainActivity extends AppCompatActivity {
             fragment = new SettingsFragment();
         } else if (navId == R.id.nav_crear) {
             fragment = new CreateModeFragment();
+        } else if (navId == R.id.nav_plantillas) {
+            fragment = new PlantillasFragment();
         } else {
             fragment = new HomeFragment();
         }
@@ -58,5 +60,19 @@ public class MainActivity extends AppCompatActivity {
                 .replace(R.id.content_frame, new HomeFragment())
                 .commit();
         binding.bottomNav.setSelectedItemId(R.id.nav_home);
+    }
+
+    public void navigateToRinging() {
+        getSupportFragmentManager().beginTransaction()
+                .replace(R.id.content_frame, new RingingFragment())
+                .addToBackStack(null)
+                .commit();
+    }
+
+    public void navigateToExecute() {
+        getSupportFragmentManager().beginTransaction()
+                .replace(R.id.content_frame, new ExecuteFragment())
+                .addToBackStack(null)
+                .commit();
     }
 }
