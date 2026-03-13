@@ -2,6 +2,8 @@ package com.alarm.rememberia;
 
 import android.content.res.ColorStateList;
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -26,6 +28,7 @@ public class HomeFragment extends Fragment {
 
     private FragmentHomeBinding binding;
     private Set<String> enabledAlarms = new HashSet<>();
+    private String searchQuery = "";
 
     private static class Alarm {
         String id, name, time, frequency, category, categoryKey;
@@ -60,7 +63,36 @@ public class HomeFragment extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         initializeAlarms();
+        setupSearch();
         populateAlarmsList();
+    }
+
+    private void setupSearch() {
+        binding.searchInputLayout.setVisibility(View.GONE);
+
+        binding.btnSearch.setOnClickListener(v -> {
+            if (binding.searchInputLayout.getVisibility() == View.GONE) {
+                binding.searchInputLayout.setVisibility(View.VISIBLE);
+                binding.searchInput.requestFocus();
+            } else {
+                binding.searchInputLayout.setVisibility(View.GONE);
+                binding.searchInput.setText("");
+                searchQuery = "";
+                populateAlarmsList();
+            }
+        });
+
+        binding.searchInput.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {}
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                searchQuery = s.toString().toLowerCase().trim();
+                populateAlarmsList();
+            }
+            @Override
+            public void afterTextChanged(Editable s) {}
+        });
     }
 
     private void initializeAlarms() {
@@ -91,6 +123,11 @@ public class HomeFragment extends Fragment {
         binding.inactiveContainer.removeAllViews();
 
         for (Alarm alarm : alarms) {
+            if (!searchQuery.isEmpty() &&
+                !alarm.name.toLowerCase().contains(searchQuery) &&
+                !alarm.category.toLowerCase().contains(searchQuery)) {
+                continue;
+            }
             View alarmCardView = createAlarmCard(alarm);
             if (enabledAlarms.contains(alarm.id)) {
                 binding.alarmsContainer.addView(alarmCardView);
@@ -142,6 +179,7 @@ public class HomeFragment extends Fragment {
         TextView nameView = createTextView(alarm.name, R.style.TextAppearance_App_Body);
         nameView.setTextColor(ContextCompat.getColor(requireContext(), R.color.foreground));
         nameView.setTextSize(14);
+        nameView.setTypeface(nameView.getTypeface(), android.graphics.Typeface.BOLD);
         LinearLayout.LayoutParams nameParams = new LinearLayout.LayoutParams(
             LinearLayout.LayoutParams.WRAP_CONTENT,
             LinearLayout.LayoutParams.WRAP_CONTENT
@@ -167,6 +205,8 @@ public class HomeFragment extends Fragment {
         mainLayout.addView(contentLayout);
 
         MaterialSwitch toggleSwitch = new MaterialSwitch(requireContext());
+        toggleSwitch.setThumbTintList(ContextCompat.getColorStateList(requireContext(), R.color.switch_thumb_tint));
+        toggleSwitch.setTrackTintList(ContextCompat.getColorStateList(requireContext(), R.color.switch_track_tint));
         toggleSwitch.setChecked(isEnabled);
         LinearLayout.LayoutParams switchParams = new LinearLayout.LayoutParams(
             LinearLayout.LayoutParams.WRAP_CONTENT,

@@ -50,7 +50,7 @@
             android:layout_marginBottom="@dimen/spacing_12"
             android:text="@string/plantillas_section_label"
             android:textAppearance="@style/TextAppearance.App.SectionLabel"
-            android:textColor="@color/secondary_700" />
+            android:textColor="@color/primary" />
     </LinearLayout>
 
     <androidx.core.widget.NestedScrollView

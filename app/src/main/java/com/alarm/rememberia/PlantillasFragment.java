@@ -111,7 +111,7 @@ public class PlantillasFragment extends Fragment {
         ));
         mainLayout.setOrientation(LinearLayout.HORIZONTAL);
         mainLayout.setPadding(dpToPx(12), dpToPx(12), dpToPx(16), dpToPx(12));
-        mainLayout.setGravity(android.view.Gravity.TOP);
+        mainLayout.setGravity(android.view.Gravity.CENTER_VERTICAL);
         card.addView(mainLayout);
 
         FrameLayout iconContainer = createIconContainer(template);
@@ -137,6 +137,7 @@ public class PlantillasFragment extends Fragment {
         nameView.setText(template.name);
         nameView.setTextColor(ContextCompat.getColor(requireContext(), R.color.foreground));
         nameView.setTextSize(14);
+        nameView.setTypeface(nameView.getTypeface(), android.graphics.Typeface.BOLD);
         LinearLayout.LayoutParams nameParams = new LinearLayout.LayoutParams(
             LinearLayout.LayoutParams.WRAP_CONTENT,
             LinearLayout.LayoutParams.WRAP_CONTENT
